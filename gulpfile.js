@@ -3,8 +3,6 @@ var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     cssmin       = require('gulp-cssmin'),
     rename       = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer');
-
 
 gulp.task('sass', function(){
     return gulp.src('src/styles/sass/**/*.sass')
