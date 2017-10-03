@@ -4,6 +4,7 @@ var gulp         = require('gulp'),
     cssmin       = require('gulp-cssmin'),
     rename       = require('gulp-rename'),
 
+
 gulp.task('sass', function(){
     return gulp.src('src/styles/sass/**/*.sass')
         .pipe(sass())
@@ -24,7 +25,7 @@ gulp.task('css-min', ['sass'], function() {
     return gulp.src('src/styles/css/main.css')
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('src/styles/css'));
+        .pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', ['browser-sync', 'sass'], function() {
