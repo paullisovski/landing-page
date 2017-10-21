@@ -1,4 +1,4 @@
 $(".menu-icon").click(function(event){
-  $( ".menu" ).slideToggle( "slow", function() {
+  $( ".resp-menu" ).slideToggle( "slow", function() {
 });
 })
