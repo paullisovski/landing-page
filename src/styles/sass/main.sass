@@ -75,7 +75,10 @@ header
     display: none
     position: absolute
     right: 5%
+    background-color: #fff
     list-style: none
+    border-bottom-right-radius: 23px
+    border-bottom-left-radius: 23px
     @media screen and (max-width: 480px)
       right: 1%
     a
@@ -86,11 +89,22 @@ header
       font-family: "Roboto", sans-serif
       font-size: 14px
       text-transform: uppercase
-      color: #fff
+      color: #82868f
       &:hover
         color: #0ebfdd
         transition: .5s
         cursor: pointer
+      &:after
+        display: block
+        content: ""
+        height: 2px
+        width: 0%
+        background-color: #0ebfdd
+        transition: width .3s ease-in-out
+      &:hover:after,
+      &:focus::after
+        margin: 0 auto
+        width: 60%
     .sign-in
       width: 125px
       height: 40px

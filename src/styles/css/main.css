@@ -15,6 +15,16 @@ header {
       font-weight: bold;
       text-transform: uppercase;
       color: #82868f; }
+    header .container ul {
+      display: flex;
+      list-style: none; }
+      header .container ul a {
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #82868f; }
     header .container nav {
       display: flex; }
       header .container nav .desktop-menu {
@@ -66,7 +76,10 @@ header {
     display: none;
     position: absolute;
     right: 5%;
-    list-style: none; }
+    background-color: #fff;
+    list-style: none;
+    border-bottom-right-radius: 23px;
+    border-bottom-left-radius: 23px; }
     @media screen and (max-width: 480px) {
       header .resp-menu {
         right: 1%; } }
@@ -78,11 +91,21 @@ header {
       font-family: "Roboto", sans-serif;
       font-size: 14px;
       text-transform: uppercase;
-      color: #fff; }
+      color: #82868f; }
       header .resp-menu a:hover {
         color: #0ebfdd;
         transition: .5s;
         cursor: pointer; }
+      header .resp-menu a:after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: #0ebfdd;
+        transition: width .3s ease-in-out; }
+      header .resp-menu a:hover:after, header .resp-menu a:focus::after {
+        margin: 0 auto;
+        width: 60%; }
     header .resp-menu .sign-in {
       width: 125px;
       height: 40px;
