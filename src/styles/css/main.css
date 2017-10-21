@@ -15,22 +15,38 @@ header {
       font-weight: bold;
       text-transform: uppercase;
       color: #82868f; }
-    header .container ul {
-      display: flex;
-      list-style: none; }
-      header .container ul a {
-        text-decoration: none;
-        padding: 15px 25px 15px 25px;
-        display: block;
-        font-family: "Roboto", sans-serif;
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #82868f; }
-        header .container ul a:hover {
-          color: #0ebfdd;
-          transition: .5s;
-          cursor: pointer; }
-      header .container ul .sign-in {
+    header .container nav {
+      display: flex; }
+      header .container nav .desktop-menu {
+        display: flex;
+        list-style: none; }
+        header .container nav .desktop-menu a {
+          text-decoration: none;
+          padding: 15px 25px 15px 25px;
+          display: block;
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #82868f; }
+          header .container nav .desktop-menu a:hover {
+            color: #0ebfdd;
+            transition: .5s;
+            cursor: pointer; }
+        @media screen and (max-width: 768px) {
+          header .container nav .desktop-menu {
+            display: none; } }
+      header .container nav .menu-icon {
+        width: 50px;
+        display: none; }
+        @media screen and (max-width: 768px) {
+          header .container nav .menu-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center; } }
+        header .container nav .menu-icon .fa-bars {
+          font-size: 30px;
+          color: #82868f; }
+      header .container nav .sign-in {
         width: 125px;
         height: 40px;
         border: none;
@@ -41,16 +57,54 @@ header {
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         text-transform: uppercase; }
-        header .container ul .sign-in:hover {
+        header .container nav .sign-in:hover {
           color: #82868f;
           background-color: #5ee3fa;
           transition: color 0.5s;
           cursor: pointer; }
+  header .resp-menu {
+    display: none;
+    position: absolute;
+    right: 5%;
+    list-style: none; }
+    @media screen and (max-width: 480px) {
+      header .resp-menu {
+        right: 1%; } }
+    header .resp-menu a {
+      text-align: center;
+      text-decoration: none;
+      padding: 15px 25px 15px 25px;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #fff; }
+      header .resp-menu a:hover {
+        color: #0ebfdd;
+        transition: .5s;
+        cursor: pointer; }
+    header .resp-menu .sign-in {
+      width: 125px;
+      height: 40px;
+      border: none;
+      outline: none;
+      border-radius: 60px;
+      background-color: #0ebfdd;
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase; }
+      header .resp-menu .sign-in:hover {
+        color: #82868f;
+        background-color: #5ee3fa;
+        transition: color 0.5s;
+        cursor: pointer; }
 
 .slogan {
   width: 100%;
   background-image: url("/src/img/bg.png");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: center; }
   .slogan .container {
     width: 80%;
     margin: 0 auto;
@@ -60,17 +114,29 @@ header {
     font-family: "Lato", sans-serif;
     color: #fff;
     text-align: center; }
+    @media screen and (max-width: 768px) {
+      .slogan .container {
+        padding: 200px 0 82px; } }
     .slogan .container .our-mission {
       display: flex; }
       .slogan .container .our-mission h1 {
         margin: 0 auto 35px;
         font-size: 44px; }
+        @media screen and (max-width: 768px) {
+          .slogan .container .our-mission h1 {
+            font-size: 36px; } }
       .slogan .container .our-mission i {
         font-size: 13px;
         vertical-align: middle; }
     .slogan .container p {
       font-size: 20px;
       line-height: 30px; }
+      @media screen and (max-width: 768px) {
+        .slogan .container p {
+          font-size: 17px; } }
+      @media screen and (max-width: 480px) {
+        .slogan .container p {
+          font-size: 15px; } }
 
 .about {
   padding: 68px 0 72px;
@@ -87,17 +153,26 @@ header {
       font-size: 44px;
       color: #0ebfdd;
       font-weight: bold; }
+      @media screen and (max-width: 768px) {
+        .about .container h1 {
+          font-size: 36px; } }
     .about .container p {
       margin-top: 31px;
       font-size: 20px;
       line-height: 30px; }
+      @media screen and (max-width: 768px) {
+        .about .container p {
+          font-size: 17px; } }
+      @media screen and (max-width: 480px) {
+        .about .container p {
+          font-size: 15px; } }
 
 .team {
   width: 100%;
   background-color: #0ebfdd;
   padding: 60px 0 64px; }
   .team .container {
-    width: 595px;
+    width: 80%;
     margin: 0 auto;
     flex-direction: column;
     font-family: "Lato", sans-serif;
@@ -107,29 +182,47 @@ header {
       margin: 0 auto;
       font-size: 44px;
       font-weight: bold; }
+      @media screen and (max-width: 768px) {
+        .team .container h1 {
+          font-size: 36px; } }
     .team .container .card-box {
+      width: 595px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       margin-top: 100px; }
-      .team .container .card-box .round {
-        width: 156px;
-        height: 156px; }
-        .team .container .card-box .round img {
-          border-radius: 50%;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 65% 40%; }
-      .team .container .card-box h2 {
-        margin-top: 12px;
-        text-align: center;
-        font-size: 18;
-        font-weight: bold; }
-      .team .container .card-box p {
-        margin-top: 5px;
-        text-align: center;
-        font-size: 16;
-        font-style: italic; }
+      @media screen and (max-width: 768px) {
+        .team .container .card-box {
+          width: 320px;
+          flex-direction: column; } }
+      @media screen and (max-width: 480px) {
+        .team .container .card-box {
+          width: 250px; } }
+      .team .container .card-box .founder {
+        width: 156px; }
+        @media screen and (max-width: 768px) {
+          .team .container .card-box .founder {
+            margin: 0 auto;
+            margin-top: 15px; } }
+        .team .container .card-box .founder .round {
+          width: 156px;
+          height: 156px; }
+          .team .container .card-box .founder .round img {
+            border-radius: 50%;
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 65% 40%; }
+        .team .container .card-box .founder h2 {
+          margin-top: 12px;
+          text-align: center;
+          font-size: 18;
+          font-weight: bold; }
+        .team .container .card-box .founder p {
+          margin-top: 5px;
+          text-align: center;
+          font-size: 16;
+          font-style: italic; }
 
 .work-with {
   display: block;
@@ -155,6 +248,7 @@ header {
   height: 600px; }
 
 footer {
+  margin-top: -5px;
   background-color: #45494d; }
   footer .container {
     margin: 0 auto;
@@ -163,9 +257,15 @@ footer {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid #5a5e62; }
+      @media screen and (max-width: 768px) {
+        footer .container .foot-nav {
+          flex-direction: column; } }
       footer .container .foot-nav .nav {
         display: flex;
         list-style: none; }
+        @media screen and (max-width: 768px) {
+          footer .container .foot-nav .nav {
+            justify-content: center; } }
         footer .container .foot-nav .nav a {
           text-decoration: none;
           padding: 35px 20px 35px 20px;
@@ -178,14 +278,25 @@ footer {
             cursor: pointer;
             color: #0ebfdd;
             transition: .5s; }
+          @media screen and (max-width: 768px) {
+            footer .container .foot-nav .nav a {
+              padding-top: 20px;
+              padding-bottom: 20px; } }
       footer .container .foot-nav .contacts {
         display: flex;
         justify-content: center; }
         footer .container .foot-nav .contacts ul {
           display: flex;
           list-style: none; }
+          @media screen and (max-width: 768px) {
+            footer .container .foot-nav .contacts ul {
+              align-items: center; } }
           footer .container .foot-nav .contacts ul li {
             margin: 17px 10px 0 10px; }
+            @media screen and (max-width: 768px) {
+              footer .container .foot-nav .contacts ul li {
+                margin-top: 10px;
+                margin-bottom: 15px; } }
             footer .container .foot-nav .contacts ul li a {
               text-decoration: none;
               padding: 15px 15px 15px 15px;
@@ -210,6 +321,9 @@ footer {
       justify-content: flex-end;
       padding-top: 15px;
       padding-bottom: 15px; }
+      @media screen and (max-width: 480px) {
+        footer .container .copywrite {
+          justify-content: center; } }
       footer .container .copywrite ul {
         display: flex;
         list-style: none; }
@@ -224,6 +338,9 @@ footer {
             padding-right: 10px;
             font-size: 12px;
             color: #5a5e62; }
+            @media screen and (max-width: 480px) {
+              footer .container .copywrite ul li a {
+                font-size: 10px; } }
             footer .container .copywrite ul li a:hover {
               cursor: pointer;
               color: #c4ccd2;
