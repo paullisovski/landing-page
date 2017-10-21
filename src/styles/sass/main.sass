@@ -21,16 +21,40 @@ header
       list-style: none
       a
         text-decoration: none
-        padding: 15px 25px 15px 25px
-        display: block
         font-family: "Roboto", sans-serif
-        font-size: 14px
+        font-size: 24px
+        font-weight: bold
         text-transform: uppercase
         color: #82868f
-        &:hover
-          color: #0ebfdd
-          transition: .5s
-          cursor: pointer
+    nav
+      display: flex
+      .desktop-menu
+        display: flex
+        list-style: none
+        a
+          text-decoration: none
+          padding: 15px 25px 15px 25px
+          display: block
+          font-family: "Roboto", sans-serif
+          font-size: 14px
+          text-transform: uppercase
+          color: #82868f
+          &:hover
+            color: #0ebfdd
+            transition: .5s
+            cursor: pointer
+        @media screen and (max-width: 768px)
+          display: none
+      .menu-icon
+        width: 50px
+        display: none
+        @media screen and (max-width: 768px)
+          display: flex
+          justify-content: center
+          align-items: center
+        .fa-bars
+          font-size: 30px
+          color: #82868f
       .sign-in
           width: 125px
           height: 40px
@@ -47,10 +71,47 @@ header
             background-color: #5ee3fa
             transition: color 0.5s
             cursor: pointer
+  .resp-menu
+    display: none
+    position: absolute
+    right: 5%
+    list-style: none
+    @media screen and (max-width: 480px)
+      right: 1%
+    a
+      text-align: center
+      text-decoration: none
+      padding: 15px 25px 15px 25px
+      display: block
+      font-family: "Roboto", sans-serif
+      font-size: 14px
+      text-transform: uppercase
+      color: #fff
+      &:hover
+        color: #0ebfdd
+        transition: .5s
+        cursor: pointer
+    .sign-in
+      width: 125px
+      height: 40px
+      border: none
+      outline: none
+      border-radius: 60px
+      background-color: #0ebfdd
+      color: #fff
+      font-family: "Roboto", sans-serif
+      font-size: 14px
+      text-transform: uppercase
+      &:hover
+        color: #82868f
+        background-color: #5ee3fa
+        transition: color 0.5s
+        cursor: pointer
 .slogan
   width: 100%
   background-image: url("/src/img/bg.png")
   background-repeat: no-repeat
+  background-position: center
   .container
     width: 80%
     margin: 0 auto
@@ -60,17 +121,25 @@ header
     font-family: "Lato", sans-serif
     color: #fff
     text-align: center
+    @media screen and (max-width: 768px)
+      padding: 200px 0 82px
     .our-mission
       display: flex
       h1
         margin: 0 auto 35px
         font-size: 44px
+        @media screen and (max-width: 768px)
+          font-size: 36px
       i
         font-size: 13px
         vertical-align: middle
     p
       font-size: 20px
       line-height: 30px
+      @media screen and (max-width: 768px)
+        font-size: 17px
+      @media screen and (max-width: 480px)
+        font-size: 15px
 .about
   padding: 68px 0 72px
   background-color: #fff
@@ -86,16 +155,22 @@ header
       font-size: 44px
       color: #0ebfdd
       font-weight: bold
+      @media screen and (max-width: 768px)
+        font-size: 36px
     p
       margin-top: 31px
       font-size: 20px
       line-height: 30px
+      @media screen and (max-width: 768px)
+        font-size: 17px
+      @media screen and (max-width: 480px)
+        font-size: 15px
 .team
   width: 100%
   background-color: #0ebfdd
   padding: 60px 0 64px
   .container
-    width: 595px
+    width: 80%
     margin: 0 auto
     flex-direction: column
     font-family: "Lato", sans-serif
@@ -105,29 +180,43 @@ header
       margin: 0 auto
       font-size: 44px
       font-weight: bold
+      @media screen and (max-width: 768px)
+        font-size: 36px
     .card-box
+      width: 595px
+      margin: 0 auto
       display: flex
       justify-content: space-between
       margin-top: 100px
-      .round
+      @media screen and (max-width: 768px)
+        width: 320px
+        flex-direction: column
+      @media screen and (max-width: 480px)
+        width: 250px
+      .founder
         width: 156px
-        height: 156px
-        img
-          border-radius: 50%
-          width: 100%
-          height: 100%
-          object-fit: cover
-          object-position: 65% 40%
-      h2
-        margin-top: 12px
-        text-align: center
-        font-size: 18
-        font-weight: bold
-      p
-        margin-top: 5px
-        text-align: center
-        font-size: 16
-        font-style: italic
+        @media screen and (max-width: 768px)
+          margin: 0 auto
+          margin-top: 15px
+        .round
+          width: 156px
+          height: 156px
+          img
+            border-radius: 50%
+            max-width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: 65% 40%
+        h2
+          margin-top: 12px
+          text-align: center
+          font-size: 18
+          font-weight: bold
+        p
+          margin-top: 5px
+          text-align: center
+          font-size: 16
+          font-style: italic
 .work-with
   display: block
   line-height: 40px
@@ -150,6 +239,7 @@ header
   width: 100%
   height: 600px
 footer
+  margin-top: -5px
   background-color: #45494d
   .container
     margin: 0 auto
@@ -158,9 +248,13 @@ footer
       display: flex
       justify-content: space-between
       border-bottom: 1px solid #5a5e62
+      @media screen and (max-width: 768px)
+        flex-direction: column
       .nav
         display: flex
         list-style: none
+        @media screen and (max-width: 768px)
+          justify-content: center
         a
           text-decoration: none
           padding: 35px 20px 35px 20px
@@ -173,14 +267,22 @@ footer
             cursor: pointer
             color: #0ebfdd
             transition: .5s
+          @media screen and (max-width: 768px)
+            padding-top: 20px
+            padding-bottom: 20px
       .contacts
         display: flex
         justify-content: center
         ul
           display: flex
           list-style: none
+          @media screen and (max-width: 768px)
+            align-items: center
           li
             margin: 17px 10px 0 10px
+            @media screen and (max-width: 768px)
+              margin-top: 10px
+              margin-bottom: 15px
             a
               text-decoration: none
               padding: 15px 15px 15px 15px
@@ -206,6 +308,8 @@ footer
       padding:
         top: 15px
         bottom: 15px
+      @media screen and (max-width: 480px)
+        justify-content: center
       ul
         display: flex
         list-style: none
@@ -221,6 +325,8 @@ footer
               right: 10px
             font-size: 12px
             color: #5a5e62
+            @media screen and (max-width: 480px)
+              font-size: 10px
             &:hover
               cursor: pointer
               color: #c4ccd2
