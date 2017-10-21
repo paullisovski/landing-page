@@ -52,6 +52,8 @@ header
           display: flex
           justify-content: center
           align-items: center
+          &:hover
+            cursor: pointer
         .fa-bars
           font-size: 30px
           color: #82868f
@@ -73,54 +75,54 @@ header
             cursor: pointer
   .resp-menu
     display: none
-    position: absolute
-    right: 5%
+    position: relative
+    bottom: 10px
+    width: 100%
     background-color: #fff
     list-style: none
-    border-bottom-right-radius: 23px
-    border-bottom-left-radius: 23px
-    @media screen and (max-width: 480px)
-      right: 1%
-    a
-      text-align: center
-      text-decoration: none
-      padding: 15px 25px 15px 25px
-      display: block
-      font-family: "Roboto", sans-serif
-      font-size: 14px
-      text-transform: uppercase
-      color: #82868f
-      &:hover
-        color: #0ebfdd
-        transition: .5s
-        cursor: pointer
-      &:after
+    li
+      display: flex
+      justify-content: center
+      a
+        text-align: center
+        text-decoration: none
+        padding: 15px 25px 15px 25px
         display: block
-        content: ""
-        height: 2px
-        width: 0%
-        background-color: #0ebfdd
-        transition: width .3s ease-in-out
-      &:hover:after,
-      &:focus::after
-        margin: 0 auto
-        width: 60%
-    .sign-in
-      width: 125px
-      height: 40px
-      border: none
-      outline: none
-      border-radius: 60px
-      background-color: #0ebfdd
-      color: #fff
-      font-family: "Roboto", sans-serif
-      font-size: 14px
-      text-transform: uppercase
-      &:hover
+        font-family: "Roboto", sans-serif
+        font-size: 14px
+        text-transform: uppercase
         color: #82868f
-        background-color: #5ee3fa
-        transition: color 0.5s
-        cursor: pointer
+        &:hover
+          color: #0ebfdd
+          transition: .5s
+          cursor: pointer
+        &:after
+          display: block
+          content: ""
+          height: 2px
+          width: 0%
+          background-color: #0ebfdd
+          transition: width .3s
+        &:hover:after,
+        &:focus::after
+          margin: auto
+          width: 100%
+      .sign-in
+        width: 125px
+        height: 40px
+        border: none
+        outline: none
+        border-radius: 60px
+        background-color: #0ebfdd
+        color: #fff
+        font-family: "Roboto", sans-serif
+        font-size: 14px
+        text-transform: uppercase
+        &:hover
+          color: #82868f
+          background-color: #5ee3fa
+          transition: color 0.5s
+          cursor: pointer
 .slogan
   width: 100%
   background-image: url("/src/img/bg.png")
