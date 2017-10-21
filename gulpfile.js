@@ -1,7 +1,7 @@
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     browserSync  = require('browser-sync'),
-    cssmin       = require('gulp-cssmin'),
+    cssmin       = require('gulp-cssmin'
     rename       = require('gulp-rename');
 
 gulp.task('sass', function(){
